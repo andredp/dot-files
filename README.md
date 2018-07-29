@@ -37,6 +37,9 @@ config push
 - Awesome Vim: https://github.com/amix/vimrc
 - zsh + prezto: https://github.com/sorin-ionescu/prezto
 - Homebrew: https://brew.sh/
+- diff-so-fancy: https://github.com/so-fancy/diff-so-fancy
+- iTerm2: https://www.iterm2.com/ (Point it to read the configuration file in $HOME)
+- Source Code PRO: https://github.com/adobe-fonts/source-code-pro
 
 #### This dotfiles repo was inspired by: https://developer.atlassian.com/blog/2016/02/best-way-to-store-dotfiles-git-bare-repo/
 
