@@ -1,4 +1,4 @@
-### My dotfiles
+# My dotfiles
 
 ## To add this config to your system:
 
@@ -20,6 +20,11 @@ config config status.showUntrackedFiles no
 
 ```
 
+### Alternatively you can do:
+```bash
+curl -Lks https://gist.github.com/andredp/554faa5ea94c0267aa5cf6698a004ab4#file-cfg-install-sh | /bin/bash
+```
+
 ## After that you can do stuff like:
 
 ```bash
@@ -28,5 +33,10 @@ config commit -m "Add file1"
 config push 
 ```
 
-## This dotfiles repo was inspired by: https://developer.atlassian.com/blog/2016/02/best-way-to-store-dotfiles-git-bare-repo/
+## Things you might want to install on a fresh system:
+- Awesome Vim: https://github.com/amix/vimrc
+- zsh + prezto: https://github.com/sorin-ionescu/prezto
+- Homebrew: https://brew.sh/
+
+#### This dotfiles repo was inspired by: https://developer.atlassian.com/blog/2016/02/best-way-to-store-dotfiles-git-bare-repo/
 
