@@ -22,7 +22,7 @@ config config status.showUntrackedFiles no
 
 ### Alternatively you can do:
 ```bash
-curl -Lks https://gist.github.com/andredp/554faa5ea94c0267aa5cf6698a004ab4#file-cfg-install-sh | /bin/bash
+curl -Lks https://gist.githubusercontent.com/andredp/554faa5ea94c0267aa5cf6698a004ab4/raw/2d85a90acde7d90faa50d45e586eabe871b1114f/cfg-install.sh | /bin/bash
 ```
 
 ## After that you can do stuff like:
