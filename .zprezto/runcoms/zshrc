@@ -24,11 +24,8 @@ function mkcd() { mkdir -p "$@" && cd "$_"; }
 # Aliases
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
-fpath=(/usr/local/share/zsh-completions $fpath)
+# Add homebrew to the completion path
+fpath=("/usr/local/bin/" $fpath)
 
-source /usr/local/share/zsh-history-substring-search/zsh-history-substring-search.zsh
-source /usr/local/share/zsh-navigation-tools/zsh-navigation-tools.plugin.zsh
-source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source /usr/local/opt/zsh-git-prompt/zshrc.sh
-
+# 10 second wait if you do something that will delete everything.
+setopt RM_STAR_WAIT
