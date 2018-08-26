@@ -43,6 +43,7 @@ zstyle ':prezto:load' pmodule \
   'autosuggestions' \
   'history-substring-search' \
   'prompt'
+  #'navigation-tools' \
   #'command-not-found' \
 
 
