@@ -30,7 +30,11 @@ fpath=("/usr/local/bin/" $fpath)
 # 10 second wait if you do something that will delete everything.
 setopt RM_STAR_WAIT
 
+export HOMEBREW_NO_AUTO_UPDATE="1"
+
 source /usr/local/share/zsh-navigation-tools/zsh-navigation-tools.plugin.zsh
 
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
+
+export LANG="en_PT.UTF-8"
