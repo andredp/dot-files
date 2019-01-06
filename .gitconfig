@@ -9,10 +9,12 @@
 	trustExitCode = true
 [user]
 	name = André Patrício
-	email = 
+	email = andre.patricio.1@sapo.pt
 	mail = andre.patricio.1@sapo.pt
+	signingkey = 92CF08722B852B9A
 [commit]
 	template = /Users/andredp/.stCommitMsg
+	gpgsign = true
 [color]
 	ui = true
 [color "diff-highlight"]
@@ -26,4 +28,8 @@
 	commit = yellow bold
 	old = red bold
 	new = green bold
-	whitespace = red reverse
+    whitespace = red reverse
+[alias]
+    fix=commit -a --amend --no-edit
+[gpg]
+	program = gpg

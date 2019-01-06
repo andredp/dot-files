@@ -39,11 +39,11 @@ zstyle ':prezto:load' pmodule \
   'homebrew' \
   'osx' \
   'git' \
-  'tmux' \
   'syntax-highlighting' \
   'autosuggestions' \
   'history-substring-search' \
   'prompt'
+  #'tmux' \
   #'navigation-tools' \
   #'command-not-found' \
 
