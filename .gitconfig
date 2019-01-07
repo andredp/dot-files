@@ -11,10 +11,10 @@
 	name = André Patrício
 	email = andre.patricio.1@sapo.pt
 	mail = andre.patricio.1@sapo.pt
-	signingkey = 92CF08722B852B9A
+	signingkey = E13131AEF9BFDED
 [commit]
 	template = /Users/andredp/.stCommitMsg
-	gpgsign = true
+#	gpgsign = true
 [color]
 	ui = true
 [color "diff-highlight"]
