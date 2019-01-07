@@ -1,6 +1,7 @@
 [core]
-	excludesfile = /Users/andredp/.gitignore_global
+	excludesfile = /Users/andre.patricio/.gitignore_global
 	pager = diff-so-fancy | less --tabs=4 -RFX
+	editor = vim
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
@@ -10,10 +11,9 @@
 [user]
 	name = André Patrício
 	email = andre.patricio.1@sapo.pt
-	mail = andre.patricio.1@sapo.pt
 	signingkey = E13131AEF9BFDED
 [commit]
-	template = /Users/andredp/.stCommitMsg
+	template = /Users/andre.patricio/.stCommitMsg
 #	gpgsign = true
 [color]
 	ui = true
@@ -22,6 +22,9 @@
 	oldHighlight = red bold 52
 	newNormal = green bold
 	newHighlight = green bold 22
+[alias]
+	hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
+    fix = commit -a --amend --no-edit
 [color "diff"]
 	meta = yellow
 	frag = magenta bold
@@ -29,7 +32,14 @@
 	old = red bold
 	new = green bold
     whitespace = red reverse
-[alias]
-    fix=commit -a --amend --no-edit
 [gpg]
 	program = gpg
+[merge]
+	tool = diffconflicts
+[mergetool "diffconflicts"]
+	cmd = vim -c DiffConflicts \"$MERGED\" \"$BASE\" \"$LOCAL\" \"$REMOTE\"
+	trustExitCode = true
+[mergetool]
+	keepBackup = false
+[pull]
+	rebase = true
