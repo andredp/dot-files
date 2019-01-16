@@ -10,6 +10,10 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
+if [ -f  "${HOME}/.iterm2_shell_integration.zsh" ]; then
+    source "${HOME}/.iterm2_shell_integration.zsh"
+fi
+
 # Customize to your needs...
 # Owner
 export USER_NAME="andredp"
@@ -23,6 +27,15 @@ function mkcd() { mkdir -p "$@" && cd "$_"; }
 
 # Aliases
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+
+## SFA
+set_tenant() { FASTLANE_SKIP_UPDATE_CHECK="true" TENANT=$1 SKIP_FASTFILE_IMPORT="true" bundle exec fastlane changeTenant }
+alias sfa-browns='set_tenant Browns'
+alias sfa-tage='set_tenant Tage'
+alias sfa-thombrowne='set_tenant ThomBrowne'
+
+## iOS
+alias rmderived='rm -rf ${HOME}/Library/Developer/Xcode/DerivedData'
 
 # Add homebrew to the completion path
 fpath=("/usr/local/bin/" $fpath)
@@ -43,3 +56,4 @@ export LC_ALL="en_US.UTF-8"
 
 export GPG_TTY=$(tty)
 export PATH="/usr/local/lib/ruby/gems/2.6.0/bin:/usr/local/opt/ruby/bin:$PATH"
+

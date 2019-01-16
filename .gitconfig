@@ -1,20 +1,21 @@
 [core]
-	excludesfile = /Users/andre.patricio/.gitignore_global
+	excludesfile = $HOME/.gitignore_global
 	pager = diff-so-fancy | less --tabs=4 -RFX
 	editor = vim
-[difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
-[mergetool "sourcetree"]
-	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
 [user]
 	name = André Patrício
-	email = andre.patricio.1@sapo.pt
-	signingkey = E13131AEF9BFDED
+	email = andre.patricio@farfetch.com
+    signingkey = 6ECC34B2AA1185DD
+    #email = andre.patricio.1@sapo.pt
+    #signingkey = E13131AEF9BFDEDA
 [commit]
-	template = /Users/andre.patricio/.stCommitMsg
-#	gpgsign = true
+	template = $HOME/.stCommitMsg
+	gpgsign = true
+[alias]
+    hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
+    fhist = log --merge --decorate --source -p
+    fix = commit -a --amend --no-edit
+    merge-patience = merge --strategy-option=patience
 [color]
 	ui = true
 [color "diff-highlight"]
@@ -22,9 +23,6 @@
 	oldHighlight = red bold 52
 	newNormal = green bold
 	newHighlight = green bold 22
-[alias]
-	hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
-    fix = commit -a --amend --no-edit
 [color "diff"]
 	meta = yellow
 	frag = magenta bold
@@ -32,14 +30,15 @@
 	old = red bold
 	new = green bold
     whitespace = red reverse
-[gpg]
-	program = gpg
 [merge]
-	tool = diffconflicts
-[mergetool "diffconflicts"]
-	cmd = vim -c DiffConflicts \"$MERGED\" \"$BASE\" \"$LOCAL\" \"$REMOTE\"
-	trustExitCode = true
+    tool = opendiff
 [mergetool]
 	keepBackup = false
-[pull]
-	rebase = true
+    trustExitCode = true
+
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
