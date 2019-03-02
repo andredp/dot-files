@@ -10,10 +10,6 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
-if [ -f  "${HOME}/.iterm2_shell_integration.zsh" ]; then
-    source "${HOME}/.iterm2_shell_integration.zsh"
-fi
-
 # Customize to your needs...
 # Owner
 export USER_NAME="andredp"
@@ -56,4 +52,6 @@ export LC_ALL="en_US.UTF-8"
 
 export GPG_TTY=$(tty)
 export PATH="/usr/local/lib/ruby/gems/2.6.0/bin:/usr/local/opt/ruby/bin:$PATH"
+
+source "${HOME}/.iterm2_shell_integration.zsh"
 

@@ -34,7 +34,6 @@ zstyle ':prezto:load' pmodule \
   'directory' \
   'spectrum' \
   'utility' \
-  'ssh' \
   'completion' \
   'homebrew' \
   'osx' \
@@ -43,6 +42,7 @@ zstyle ':prezto:load' pmodule \
   'autosuggestions' \
   'history-substring-search' \
   'prompt'
+  #'ssh' \
   #'tmux' \
   #'navigation-tools' \
   #'command-not-found' \
