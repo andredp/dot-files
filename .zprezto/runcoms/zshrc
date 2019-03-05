@@ -29,7 +29,7 @@ function mkcd() { mkdir -p "$@" && cd "$_"; }
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
 ## SFA
-set_tenant() { FASTLANE_SKIP_UPDATE_CHECK="true" TENANT=$1 SKIP_FASTFILE_IMPORT="true" bundle exec fastlane changeTenant }
+set_tenant() { FASTLANE_SKIP_UPDATE_CHECK=true TENANT=$1 SKIP_FASTFILE_IMPORT=true bundle exec fastlane change_tenant > /dev/null }
 alias sfa-browns='set_tenant Browns'
 alias sfa-tage='set_tenant Tage'
 alias sfa-thombrowne='set_tenant ThomBrowne'
